@@ -507,20 +507,29 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 280px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 210px;
   gap: 16px;
-  height: 280px;
+  height: auto;
 }
 
 .gallery-item {
   position: relative;
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
+  box-shadow: var(--shadow);
+  min-height: 210px;
 }
 
-.gallery-large { grid-row: 1; grid-column: 1; }
+.gallery-large {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+.gallery-grid .gallery-item:not(.gallery-large) {
+  grid-column: span 2;
+}
 
 .gallery-item img {
   width: 100%;
@@ -548,6 +557,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.05em;
+}
+
+.gallery-feature .gallery-overlay span {
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
 }
 
 /* ── Contact ── */
@@ -680,11 +694,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
   .about-img-badge { bottom: -16px; right: -8px; }
   .contact-container { grid-template-columns: 1fr; gap: 48px; }
   .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 200px;
-    height: auto;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-rows: 180px;
   }
-  .gallery-large { grid-column: 1 / 3; }
+  .gallery-large { grid-column: span 6; grid-row: span 2; }
+  .gallery-grid .gallery-item:not(.gallery-large) { grid-column: span 2; }
   .stat-item { padding: 10px 24px; }
   .stat-divider { height: 32px; }
 }
@@ -717,10 +731,15 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
   .menu-grid { grid-template-columns: 1fr; }
   .gallery-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 220px 180px 180px;
+    grid-auto-rows: 220px;
     height: auto;
   }
-  .gallery-large { grid-column: 1; }
+  .gallery-large,
+  .gallery-grid .gallery-item:not(.gallery-large) {
+    grid-column: 1;
+    grid-row: auto;
+    min-height: 220px;
+  }
 }
 
 @media (max-width: 480px) {

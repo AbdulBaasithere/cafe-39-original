@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAFE 39 | Restaurant in Arambol, Goa</title>
-    <meta name="description" content="Visit CAFE 39 — a top-rated restaurant in Arambol, Goa. Experience dining done right at CAFE 39, Arambol's beloved restaurant with a stellar 4.1⭐ rating from 77+ satisfied guests. We are...">
+    <meta name="description" content="CAFE 39 is a top-rated restaurant in Arambol, Goa, with a warm atmosphere, Goan specialties, and a 4.1⭐ guest rating. Browse the menu, view the space, and reserve a table.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -40,10 +40,10 @@
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> 4.1 Rated Restaurant
             </div>
             <h1 class="hero-title">CAFE 39</h1>
-            <p class="hero-subtitle">Restaurant &bull; Arambol, Goa</p>
+            <p class="hero-subtitle">A warm, photo-ready dining spot in Arambol, Goa</p>
             <div class="hero-cta">
                 <a href="#menu" class="btn btn-primary">Explore Menu</a>
-                <a href="#contact" class="btn btn-outline">Find Us</a>
+                <a href="https://wa.me/917406659671" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Reserve on WhatsApp</a>
             </div>
         </div>
         <div class="hero-scroll-hint">
@@ -91,7 +91,7 @@
                 <span class="section-tag">Our Story</span>
                 <h2 class="section-title">Why Guests Love <span class="highlight">CAFE 39</span></h2>
                 <div class="title-underline"></div>
-                <p class="about-text">Experience dining done right at CAFE 39, Arambol's beloved restaurant with a stellar 4.1⭐ rating from 77+ satisfied guests. We are passionate about honest, flavourful cooking — using fresh, local ingredients to craft dishes that bring people together. From intimate dinners to lively family gatherings, CAFE 39 is where every occasion becomes a memory.</p>
+                <p class="about-text">Experience dining done right at CAFE 39, Arambol's beloved restaurant with a stellar 4.1⭐ rating from 77+ satisfied guests. We serve crowd-pleasing Goan, Indian, and continental dishes in a warm, welcoming space that photographs beautifully and feels even better in person.</p>
                 <div class="feature-grid">
                     <div class="feature-item">
                         <i class="fa-solid fa-leaf feature-icon"></i>
@@ -256,22 +256,26 @@
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-tag">Visual Tour</span>
-                <h2 class="section-title">A Glimpse Inside</h2>
+                <h2 class="section-title">A Space People Want to Share</h2>
                 <div class="title-underline"></div>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item gallery-large">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80&auto=format&fit=crop" alt="CAFE 39 Atmosphere" onerror="this.onerror=null;this.src='shared/restaurant-hero.jpg'">
-                    <div class="gallery-overlay"><span>Our Space</span></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1455619452474-d22d9de6e0a2?w=900&q=80&auto=format&fit=crop" alt="CAFE 39 Food" onerror="this.onerror=null;this.src='shared/restaurant-hero.jpg'">
-                    <div class="gallery-overlay"><span>Signature Dishes</span></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1540202404-1b927e27fa8b?w=900&q=80&auto=format&fit=crop" alt="CAFE 39 Ambience" onerror="this.onerror=null;this.src='shared/restaurant-hero.jpg'">
-                    <div class="gallery-overlay"><span>Warm Ambience</span></div>
-                </div>
+            <div class="gallery-grid showcase-grid">
+                <figure class="gallery-item gallery-large gallery-feature">
+                    <img src="shared/cafe-exterior.jpg" alt="CAFE 39 exterior at night">
+                    <figcaption class="gallery-overlay"><span>Bright Street Presence</span></figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="shared/gallery-1.png" alt="CAFE 39 wall art and interior decor">
+                    <figcaption class="gallery-overlay"><span>Distinctive Interior</span></figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="shared/gallery-2.png" alt="CAFE 39 sign and seating outside">
+                    <figcaption class="gallery-overlay"><span>Easy to Spot</span></figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="shared/dining-group.jpg" alt="Signature dish served at CAFE 39">
+                    <figcaption class="gallery-overlay"><span>Signature Dish</span></figcaption>
+                </figure>
             </div>
         </div>
     </section>
@@ -377,20 +381,5 @@
         }
     </script>
 
-    <script>
-    /* Hero image fallback - keep the local hero visible if a remote override fails */
-    (function () {
-        var heroBg = document.querySelector('.hero-bg');
-        if (!heroBg) return;
-        var styleVal = heroBg.style.backgroundImage || '';
-        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
-        if (!match || !match[1]) return;
-        var testImg = new Image();
-        testImg.onerror = function () {
-            heroBg.style.backgroundImage = "url('shared/restaurant-hero.jpg')";
-        };
-        testImg.src = match[1];
-    })();
-    </script>
 </body>
 </html>
