@@ -6,17 +6,17 @@ DEMOS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 FALLBACK_MAP = {
-    "cafe": "../shared/cafe-hero.jpg",
-    "coffee": "../shared/coffee-hero.jpg",
-    "restaurant": "../shared/restaurant-hero.jpg",
-    "seafood": "../shared/seafood-hero.jpg",
-    "bakery": "../shared/bakery-hero.jpg",
-    "cake": "../shared/bakery-hero.jpg",
-    "bar": "../shared/bar-hero.jpg",
-    "bistro": "../shared/bar-hero.jpg",
-    "cocktail": "../shared/bar-hero.jpg",
-    "goan": "../shared/restaurant-hero.jpg",
-    "default": "../shared/restaurant-hero.jpg",
+    "cafe": "shared/cafe-hero.jpg",
+    "coffee": "shared/coffee-hero.jpg",
+    "restaurant": "shared/restaurant-hero.jpg",
+    "seafood": "shared/seafood-hero.jpg",
+    "bakery": "shared/bakery-hero.jpg",
+    "cake": "shared/bakery-hero.jpg",
+    "bar": "shared/bar-hero.jpg",
+    "bistro": "shared/bar-hero.jpg",
+    "cocktail": "shared/bar-hero.jpg",
+    "goan": "shared/restaurant-hero.jpg",
+    "default": "shared/restaurant-hero.jpg",
 }
 
 

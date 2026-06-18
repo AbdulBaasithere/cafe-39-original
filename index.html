@@ -33,7 +33,7 @@
 
     <!-- Hero -->
     <section id="home" class="hero-section">
-        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1437796444009-79f3e5ac6e69?w=1920&q=85&auto=format&fit=crop');"></div>
+        <div class="hero-bg" style="background-image: url('shared/restaurant-hero.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-container">
             <div class="rating-badge">
@@ -80,7 +80,7 @@
     <section id="about" class="about-section">
         <div class="container about-container">
             <div class="about-image-wrap">
-                <img src="../shared/restaurant-hero.jpg" alt="CAFE 39 — Arambol, Goa" class="about-img">
+                <img src="shared/restaurant-hero.jpg" alt="CAFE 39 — Arambol, Goa" class="about-img">
                 <div class="about-img-badge">
                     <i class="fa-solid fa-star"></i>
                     <span>4.1</span>
@@ -261,15 +261,15 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item gallery-large">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80&auto=format&fit=crop" alt="CAFE 39 Atmosphere" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80&auto=format&fit=crop" alt="CAFE 39 Atmosphere" onerror="this.onerror=null;this.src='shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Our Space</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1455619452474-d22d9de6e0a2?w=900&q=80&auto=format&fit=crop" alt="CAFE 39 Food" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
+                    <img src="https://images.unsplash.com/photo-1455619452474-d22d9de6e0a2?w=900&q=80&auto=format&fit=crop" alt="CAFE 39 Food" onerror="this.onerror=null;this.src='shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Signature Dishes</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1540202404-1b927e27fa8b?w=900&q=80&auto=format&fit=crop" alt="CAFE 39 Ambience" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
+                    <img src="https://images.unsplash.com/photo-1540202404-1b927e27fa8b?w=900&q=80&auto=format&fit=crop" alt="CAFE 39 Ambience" onerror="this.onerror=null;this.src='shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Warm Ambience</span></div>
                 </div>
             </div>
@@ -378,7 +378,7 @@
     </script>
 
     <script>
-    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    /* Hero image fallback - keep the local hero visible if a remote override fails */
     (function () {
         var heroBg = document.querySelector('.hero-bg');
         if (!heroBg) return;
@@ -387,7 +387,7 @@
         if (!match || !match[1]) return;
         var testImg = new Image();
         testImg.onerror = function () {
-            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+            heroBg.style.backgroundImage = "url('shared/restaurant-hero.jpg')";
         };
         testImg.src = match[1];
     })();
